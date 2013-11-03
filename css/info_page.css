@@ -1,0 +1,19 @@
+/*
+ * Customizations for info pages.
+ * A. Dorsk
+ */
+
+.exercise-title.infopage-title {
+  text-align: left;
+}
+
+.page-infopage p{
+  word-break: normal;
+}
+
+.page-infopage .exercise-title{
+  width: 100%;
+  display: table-cell;
+  text-transform: uppercase;
+  font-size: 150%;
+}
