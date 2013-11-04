@@ -1051,6 +1051,7 @@ table td {
 .icon-heart:before      { content: "\e604"; }
 .icon-gear_caret:before { content: "\e605"; }
 .icon-logout:before     { content: "\e600"; }
+.icon-cricket:before    { content: "\e606"; }
 
 /* ================================================================== *\
    Animations ($animations)
@@ -1259,7 +1260,7 @@ table td {
 	-moz-box-shadow:    inset 0 1px 0 hsla(0, 0%, 100%, 0.2);
 	box-shadow:         inset 0 1px 0 hsla(0, 0%, 100%, 0.2);
 	color: #fff;
-	font-family: "futura-renner", "Helvetica Neue", Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-weight: 500;
 	-webkit-backface-visibility: hidden;

@@ -1,0 +1,11 @@
+.footer .sensei{
+  color: #e54d4a;
+}
+
+.footer .sensei-icon {
+  height: 40px !important;
+}
+
+.footer .sensei-text{
+  font-style: italic
+}
