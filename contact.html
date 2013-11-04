@@ -19,18 +19,19 @@
 <link rel="stylesheet" href="css/fonts/futura-renner.css">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/info_page.css">
+<link rel="stylesheet" href="css/contact_page.css">
 
 </head>
 
-<body class="page-exercise page-infopage" style="">
+<body class="page-exercise page-infopage page-contact" style="">
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
+fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="page">
@@ -57,33 +58,45 @@
     <div class="exercise wrapper">
 
         <header class="exercise-header">
-            <h2 class="exercise-title infopage-title">Request an Invitation</h2>
+            <h2 class="exercise-title infopage-title">Contact</h2>
         </header>
 
         <div class="exercise-content">
-            <p>Thank you for your interest in Musikata.</p>
 
-            <p>The dojo is currently under development.</p>
+            <iframe id="_frame" style="display: none;"></iframe>
+            <form 
+                action="https://docs.google.com/a/musikata.com/forms/d/1GC07EzCGQ9Gr7C77V0Iyej2crXmbVUx78LAtoxoeKfs/formResponse"
+                target="_frame"
+                method="POST"
+                id="contactForm"
+                target="_self" 
+                >
 
-            <p>If you would like to request a preview invitation, please leave your email address below:</p>
+                <div class="form-element">
+                    <label for="email">Your Email*</label>
+                    <input id="email" type="email" name="entry.479616241" value="" class="" required="" title="Please enter a valid email address.">
+                </div>
 
-            <div>
-                <form id="invitationForm">
-                    <div id="email-element" class="form-element">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" size="30" name="entry.1140497754">
-                    </div>
-                    <div id="submit-element" class="form-element">
-                        <input type="submit" value="request invitation" class="button button_primary">
-                    </div>
-                </form>
+                <div class="form-element">
+                    <label for="subject">Subject*</label>
+                    <input id="subject" type="text" name="entry.1631404654" value="" class="" required="" title="">
+                </div>
 
+                <div class="form-element">
+                    <label for="message">Your Message*</label>
+                    <textarea id="message" name="entry.1003950911" rows="8" cols="0" class="" required=""></textarea>
+                </div>
+
+                <div class="form-element">
+                    <input type="submit" name="submit" value="Submit" class="button button_primary">
+                </div>
+            </form>
+
+            <div id="result" class="form-result success" style="display:none;">
+                Thank you. Your message has been received.
             </div>
 
-            <p id="inviteResult" class="form-result" style="display:none;">sending request...</p>
-
             <p>You can also connect with us on <a href="https://www.facebook.com/musikata">Facebook</a> and <a href="http://twitter.com/zen4music">Twitter</a> for the latest updates.</p>
-
             <div>
                 <a href="https://twitter.com/zen4music" class="twitter-follow-button" data-show-count="false">Follow @zen4music</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -91,13 +104,10 @@
                 <div class="fb-like" data-href="http://www.facebook.com/musikata" data-width="47" data-height="20" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false"></div>
             </div>
 
-            <p>Please feel free to <a href="contact">contact us</a> if you have any questions.</p>
-
         </div>
 
         <footer class="exercise-footer"></footer>
 
-        </div>
     </div>
 
     </main>
@@ -118,57 +128,19 @@
 <!-- Scripts -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="scripts/lib/modernizr-2.6.2.min.js"></script>
-<script src="scripts/main.js"></script>
 
 <script>
 
-    $(document).ready(function(){
-
-        var formUrl = 'https://docs.google.com/a/musikata.com/forms/d/1G2bIE8sTcM0piqoLX8WoZXyn-pAcRldJZROCNbxKlBU/formResponse?submit=Submit&entry.1696214548=';
-
-        var $invitationForm = $('#invitationForm');
-
-        var $emailEl = $('#email-element');
-        var $emailInput = $emailEl.find('input');
-        var $emailLabel = $emailEl.find('label');
-
-        var $result = $('#inviteResult');
-
-        $emailInput.on('keydown', function(){
-            $emailLabel.hide();
+$(document).ready(function(){
+    var $contactForm = $('#contactForm');
+    var $result = $('#result');
+    $contactForm.on('submit', function(){
+        $contactForm.fadeOut(function(){
+            $result.fadeIn();
         });
-        $emailInput.on('keyup', function(){
-            if (! $emailInput.val().length){
-                $emailLabel.fadeIn();
-            }
-        });
-
-        $invitationForm.on('submit', function(e){
-            e.preventDefault();
-
-            $invitationForm.fadeOut(500, function(){
-                $result.fadeIn(250);
-            });
-
-            var url = formUrl + encodeURIComponent($emailInput.val());
-            $.ajax({
-                url: url,
-                complete: function(xhr, status){
-                    if (xhr.status == 0 || xhr.status == 200){
-                        $result.html('Request received.');
-                        $result.addClass('success');
-                    }
-                    else{
-                        $result.html('We apologize, there was an error processing your request. Please <a href="contact">contact us</a>');
-                        $result.addClass('error');
-                    }
-                }
-            });
-
-            return false;
-        });
-
     });
+
+});
 
 </script>
 
