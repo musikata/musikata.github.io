@@ -1,188 +1,95 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="ClearType" content="true">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+---
+layout: default
+title: Request an Invitation
+stylesheets: css/info_page.css
+body_classes: page-exercise page-infopage
+---
 
-<!-- DNS prefetch -->
-<link rel="dns-prefetch" href="http://ajax.googleapis.com/">
-<link rel="dns-prefetch" href="http://www.google-analytics.com/">
+<div class="exercise wrapper">
 
-<!-- Title, desc -->
-<title>Musikata | Musical Dojo | Learn Music </title>
-<meta name="description" content="Train your inner musician. Ear training. Music theory. Community. And more. Musikata.">
-
-<!-- Styles -->
-<link rel="stylesheet" href="css/fonts/futura-renner.css">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/info_page.css">
-
-</head>
-
-<body class="page-exercise page-infopage" style="">
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div class="page">
-
-    <!-- header -->
-    <header class="header toolbar" role="banner">
-        <div class="wrapper">
-            <div class="toolbar-block">
-                <a href="#" class="brand">
-                    <span class="brand-logo"><i class="icon-logo"></i></span>
-                    <strong class="brand-name">Musikata</strong>
-                </a>
-            </div>
-
-            <nav class="toolbar-block text_right">
-                <a href="./musikata.bigroomstudios.com_files/musikata.bigroomstudios.com.html" class="toolbar-login button button_primary">Login</a>
-            </nav>
-        </div>
+    <header class="exercise-header">
+        <h2 class="exercise-title infopage-title">Request an Invitation</h2>
     </header>
 
-    <!-- main -->
-    <main class="main" role="main">
+    <div class="exercise-content">
+        <p>Thank you for your interest in Musikata.</p>
 
-    <div class="exercise wrapper">
+        <p>The dojo is currently under development.</p>
 
-        <header class="exercise-header">
-            <h2 class="exercise-title infopage-title">Request an Invitation</h2>
-        </header>
+        <p>If you would like to request a preview invitation, please leave your email address below:</p>
 
-        <div class="exercise-content">
-            <p>Thank you for your interest in Musikata.</p>
-
-            <p>The dojo is currently under development.</p>
-
-            <p>If you would like to request a preview invitation, please leave your email address below:</p>
-
-            <div>
-                <form id="invitationForm">
-                    <div id="email-element" class="form-element">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" size="30" name="entry.1140497754">
-                    </div>
-                    <div id="submit-element" class="form-element">
-                        <input type="submit" value="request invitation" class="button button_primary">
-                    </div>
-                </form>
-
-            </div>
-
-            <p id="inviteResult" class="form-result" style="display:none;">sending request...</p>
-
-            <p>You can also connect with us on <a href="https://www.facebook.com/musikata">Facebook</a> and <a href="http://twitter.com/zen4music">Twitter</a> for the latest updates.</p>
-
-            <div>
-                <a href="https://twitter.com/zen4music" class="twitter-follow-button" data-show-count="false">Follow @zen4music</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-                <div class="fb-like" data-href="http://www.facebook.com/musikata" data-width="47" data-height="20" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false"></div>
-            </div>
-
-            <p>Please feel free to <a href="contact">contact us</a> if you have any questions.</p>
+        <div>
+            <form id="invitationForm">
+                <div id="email-element" class="form-element">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" size="30" name="entry.1140497754">
+                </div>
+                <div id="submit-element" class="form-element">
+                    <input type="submit" value="request invitation" class="button button_primary">
+                </div>
+            </form>
 
         </div>
 
-        <footer class="exercise-footer"></footer>
+        <p id="inviteResult" class="form-result" style="display:none;">sending request...</p>
 
-        </div>
+        <p>You can also connect with us on <a href="https://www.facebook.com/musikata">Facebook</a> and <a href="http://twitter.com/zen4music">Twitter</a> for the latest updates.</p>
+
+        <p>Please feel free to <a href="contact">contact us</a> if you have any questions.</p>
+
     </div>
 
-    </main>
-
-    <!-- footer -->
-    <footer class="footer toolbar">
-        <div class="wrapper">
-            <nav class="toolbar-block footer-menu" role="navigation">
-                <a href="./musikata.bigroomstudios.com_files/musikata.bigroomstudios.com.html" class="menu-item">About</a>
-                <a href="./musikata.bigroomstudios.com_files/musikata.bigroomstudios.com.html" class="menu-item">Contact</a>
-            </nav>
-
-            <div class="toolbar-block footer-copyright text_right">© Copyright 2013 MUSIKATA</div>
-        </div>
-    </footer>
+    <footer class="exercise-footer"></footer>
 </div>
-
-<!-- Scripts -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="scripts/lib/modernizr-2.6.2.min.js"></script>
-<script src="scripts/main.js"></script>
 
 <script>
 
-    $(document).ready(function(){
+$(document).ready(function(){
 
-        var formUrl = 'https://docs.google.com/a/musikata.com/forms/d/1G2bIE8sTcM0piqoLX8WoZXyn-pAcRldJZROCNbxKlBU/formResponse?submit=Submit&entry.1696214548=';
+    var formUrl = 'https://docs.google.com/a/musikata.com/forms/d/1G2bIE8sTcM0piqoLX8WoZXyn-pAcRldJZROCNbxKlBU/formResponse?submit=Submit&entry.1696214548=';
 
-        var $invitationForm = $('#invitationForm');
+    var $invitationForm = $('#invitationForm');
 
-        var $emailEl = $('#email-element');
-        var $emailInput = $emailEl.find('input');
-        var $emailLabel = $emailEl.find('label');
+    var $emailEl = $('#email-element');
+    var $emailInput = $emailEl.find('input');
+    var $emailLabel = $emailEl.find('label');
 
-        var $result = $('#inviteResult');
+    var $result = $('#inviteResult');
 
-        $emailInput.on('keydown', function(){
-            $emailLabel.hide();
+    $emailInput.on('keydown', function(){
+        $emailLabel.hide();
+    });
+    $emailInput.on('keyup', function(){
+        if (! $emailInput.val().length){
+            $emailLabel.fadeIn();
+        }
+    });
+
+    $invitationForm.on('submit', function(e){
+        e.preventDefault();
+
+        $invitationForm.fadeOut(500, function(){
+            $result.fadeIn(250);
         });
-        $emailInput.on('keyup', function(){
-            if (! $emailInput.val().length){
-                $emailLabel.fadeIn();
+
+        var url = formUrl + encodeURIComponent($emailInput.val());
+        $.ajax({
+            url: url,
+            complete: function(xhr, status){
+                if (xhr.status == 0 || xhr.status == 200){
+                    $result.html('Request received.');
+                    $result.addClass('success');
+                }
+                else{
+                    $result.html('We apologize, there was an error processing your request. Please <a href="contact">contact us</a>');
+                    $result.addClass('error');
+                }
             }
         });
 
-        $invitationForm.on('submit', function(e){
-            e.preventDefault();
-
-            $invitationForm.fadeOut(500, function(){
-                $result.fadeIn(250);
-            });
-
-            var url = formUrl + encodeURIComponent($emailInput.val());
-            $.ajax({
-                url: url,
-                complete: function(xhr, status){
-                    if (xhr.status == 0 || xhr.status == 200){
-                        $result.html('Request received.');
-                        $result.addClass('success');
-                    }
-                    else{
-                        $result.html('We apologize, there was an error processing your request. Please <a href="contact">contact us</a>');
-                        $result.addClass('error');
-                    }
-                }
-            });
-
-            return false;
-        });
-
+        return false;
     });
 
+});
+
 </script>
-
-<!-- Google Analytics -->
-<script>
-(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,"script","http://www.google-analytics.com/analytics.js","ga");
-
-ga("create", "UA-45394511-1", "www.musikata.com");
-ga("send", "pageview");
-</script>
-
-
-</body>
-</html>

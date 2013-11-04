@@ -1,0 +1,64 @@
+/*
+ * Customizations for info pages.
+ * A. Dorsk
+ */
+
+.exercise-title.infopage-title {
+  text-align: left;
+}
+
+.page-infopage p{
+  word-break: normal;
+}
+
+.page-infopage .page {
+  padding-bottom: 1rem;
+}
+
+.page-infopage .footer {
+  position: relative;
+}
+
+.page-infopage .exercise-title{
+  width: 100%;
+  display: table-cell;
+  text-transform: uppercase;
+  font-size: 150%;
+}
+
+#invitationForm .form-element {
+  position: relative;
+  margin-bottom: 7px;
+}
+
+#invitationForm label {
+  position: absolute;
+  top: 7px;
+  left: .5em;
+  color: #999;
+}
+
+#invitationForm input {
+  width: auto;
+}
+
+.form-result {
+  font-style: italic;
+  font-weight: bold;
+  border-width: thin;
+  border-style: solid;
+  padding: 7px;
+}
+
+.form-result.success {
+  color: #234600;
+  background-color: #f8fff0;
+  border-color: #be7;
+}
+
+.form-result.error{
+  color: #8c2e0b;
+  background-color: #fef5f1;
+  border-color: #ed541d;
+}
+
