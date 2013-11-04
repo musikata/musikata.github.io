@@ -1678,12 +1678,14 @@ table td {
 	box-shadow:         0 0 10px hsla(0, 0%, 0%, 0.15);
 }
 
+/*
 .cssanimations .exercise {
 	-webkit-animation: fadeInUp 1s both;
 	-moz-animation:    fadeInUp 1s both;
 	-o-animation:      fadeInUp 1s both;
 	animation:         fadeInUp 1s both;
 }
+*/
 
 .exercise-header,
 .exercise-footer {

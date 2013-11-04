@@ -2,6 +2,10 @@
  * Customizations for splash page.
  */
 
+.hero-logo img {
+  margin-left: 2.5em;
+}
+
 .hero-title{
   display: none;
 }
