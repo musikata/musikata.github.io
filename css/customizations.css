@@ -4,6 +4,7 @@
 
 .footer .sensei-icon {
   height: 40px !important;
+  float: left;
 }
 
 .footer .sensei-text{
