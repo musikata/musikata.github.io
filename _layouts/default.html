@@ -35,9 +35,13 @@
 {% include header.html %}
 
 <!-- main -->
-<main class="main" role="main" style="background: #f7f1e1; padding: 10px;">
-<div class="container" style="border-radius: 5px; background: #fff;">
-    {{ content }}
+<main id="main" class="main" role="main" style="padding: 10px;">
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            {{ content }}
+        </div>
+    </div>
 </div>
 </main>
 
