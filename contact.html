@@ -1,68 +1,29 @@
 ---
 layout: default
 title: Contact
-stylesheets: [css/info_page.css, css/contact_page.css]
-body_classes: page-exercise page-infopage page-contactpage
+body_classes: page-contact
 ---
-<script>
 
-$(document).ready(function(){
-    var $contactForm = $('#contactForm');
-    var $result = $('#result');
-    $contactForm.on('submit', function(){
-        $contactForm.fadeOut(function(){
-            $result.fadeIn();
-        });
-    });
-
-});
-
-</script>
-
-<div class="exercise wrapper">
-
-    <header class="exercise-header">
-        <h2 class="exercise-title infopage-title">Contact</h2>
-    </header>
-
-    <div class="exercise-content">
-
-        <iframe id="form_target" name="form_target" style="display: none;"></iframe>
-        <form 
-            action="https://docs.google.com/a/musikata.com/forms/d/1GC07EzCGQ9Gr7C77V0Iyej2crXmbVUx78LAtoxoeKfs/formResponse"
-            target="form_target"
-            method="POST"
-            id="contactForm"
-            >
-
-            <div class="form-element">
-                <label for="email">Your Email*</label>
-                <input id="email" type="email" name="entry.479616241" value="" class="" required="" title="Please enter a valid email address.">
-            </div>
-
-            <div class="form-element">
-                <label for="subject">Subject*</label>
-                <input id="subject" type="text" name="entry.1631404654" value="" class="" required="" title="">
-            </div>
-
-            <div class="form-element">
-                <label for="message">Your Message*</label>
-                <textarea id="message" name="entry.1003950911" rows="8" cols="0" class="" required=""></textarea>
-            </div>
-
-            <div class="form-element">
-                <input type="submit" name="submit" value="Submit" class="button button_primary">
-            </div>
-        </form>
-
-        <div id="result" class="form-result success" style="display:none;">
-            Thank you. Your message has been received.
-        </div>
-
-        <p>You can also connect with us on <a href="https://www.facebook.com/musikata">Facebook</a> and <a href="http://twitter.com/zen4music">Twitter</a> for the latest updates.</p>
-
+<div class="row">
+    <div class="col-lg-4 col-lg-offset-4 col-xs-12 text-center" style="margin-bottom: 10px;">
+        <img src="/assets/img/tori_singing_150x120.png"/>
     </div>
+</div>
 
-    <footer class="exercise-footer"></footer>
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3 col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4 class="text-center">Contact Musikata</h4>
 
+                <p>You can leave a note for us with <a href="https://docs.google.com/a/musikata.com/forms/d/1GC07EzCGQ9Gr7C77V0Iyej2crXmbVUx78LAtoxoeKfs/viewform" target="_blank">this form</a>.</p>
+
+                <p>You can sign up for our mailing list with <a href="https://docs.google.com/a/musikata.com/forms/d/1G2bIE8sTcM0piqoLX8WoZXyn-pAcRldJZROCNbxKlBU/viewform?usp=send_form" target="_blank">this form</a>.</p>
+
+                <p>You can also connect with us on <a href="https://www.facebook.com/musikata" target="_blank">Facebook</a> and <a href="http://twitter.com/zen4music" target="_blank">Twitter</a>.
+
+                <p>We look forward to hearing from you.</p>
+            </div>
+        </div>
+    </div>
 </div>
