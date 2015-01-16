@@ -1,3 +1,3 @@
 [submodule "bootswatch"]
 	path = bootswatch
-	url = git@github.com:musikata/bootswatch.git
+	url = git://github.com:musikata/bootswatch.git
